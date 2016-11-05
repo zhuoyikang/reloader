@@ -23,3 +23,10 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     ```
 
 # reloader
+
+if set the config to true , when you run your application by `iex -S mix`, and you change you code and `mix compile` it , the reloader will auto upgrade the change ,so you don't need to restart your application again
+
+``` 
+# config.exs
+config :reloader, run: true
+```
