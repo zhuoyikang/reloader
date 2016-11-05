@@ -30,7 +30,7 @@ defmodule Reloader.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp description do
@@ -42,7 +42,7 @@ defmodule Reloader.Mixfile do
   defp package do
     [# These are the default files included in the package
       name: :reloader,
-      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      files: ["lib", "src", "mix.exs", "README*"],
       maintainers: ["zhuoyikang"],
       licenses: ["Apache 2.0"],
       links: %{"GitHub" => "https://github.com/indie21/reloader"}
