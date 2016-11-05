@@ -7,7 +7,8 @@ defmodule Reloader.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     erlc_options: [:debug_info],
+     description: description(),
+     package: package(),
      deps: deps()]
   end
 
@@ -31,4 +32,21 @@ defmodule Reloader.Mixfile do
   defp deps do
     []
   end
+
+  defp description do
+    """
+    auto load the changed beam in development
+    """
+  end
+
+  defp package do
+    [# These are the default files included in the package
+      name: :reloader,
+      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      maintainers: ["zhuoyikang"],
+      licenses: ["Apache 2.0"],
+      links: %{"GitHub" => "https://github.com/indie21/reloader"}
+    ]
+  end
+
 end
